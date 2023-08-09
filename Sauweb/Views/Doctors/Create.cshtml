@@ -1,0 +1,147 @@
+﻿@model SauWeb.Models.Doctor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Doctor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DoctorName" class="control-label"></label>
+                <input asp-for="DoctorName" class="form-control"/>
+                <span asp-validation-for="DoctorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HospitalName" class="control-label"></label>
+                <select asp-for="HospitalName" class="form-control">
+                    <option value="01">Adana Devlet Hastanesi</option>
+                    <option value="02">Adıyaman Devlet Hastanesi</option>
+                    <option value="03">Afyon Devlet Hastanesi</option>
+                    <option value="04">Ağrı Devlet Hastanesi</option>
+                    <option value="05">Amasya Devlet Hastanesi</option>
+                    <option value="06">Ankara Devlet Hastanesi</option>
+                    <option value="07">Antalya Devlet Hastanesi</option>
+                    <option value="08">Artvin Devlet Hastanesi</option>
+                    <option value="09">Aydın Devlet Hastanesi</option>
+                    <option value="10">Balıkesir Devlet Hastanesi</option>
+                    <option value="11">Bilecik Devlet Hastanesi</option>
+                    <option value="12">Bingöl  Devlet Hastanesi</option>
+                    <option value="13">Bitlis Devlet Hastanesi</option>
+                    <option value="14">Bolu Devlet Hastanesi</option>
+                    <option value="15">Burdur Devlet Hastanesi</option>
+                    <option value="16">Bursa Devlet Hastanesi</option>
+                    <option value="17">Çanakkale Devlet Hastanesi</option>
+                    <option value="18">Çankırı Devlet Hastanesi</option>
+                    <option value="19">Çorum Devlet Hastanesi</option>
+                    <option value="20">Denizli Devlet Hastanesi</option>
+                    <option value="21">Diyarbakır Devlet Hastanesi</option>
+                    <option value="22">Edirne Devlet Hastanesi</option>
+                    <option value="23">Elazığ Devlet Hastanesi</option>
+                    <option value="24">Erzincan Devlet Hastanesi</option>
+                    <option value="25">Erzurum Devlet Hastanesi</option>
+                    <option value="26">Eskişehir Devlet Hastanesi</option>
+                    <option value="27">Gaziantep Devlet Hastanesi</option>
+                    <option value="28">Giresun Devlet Hastanesi</option>
+                    <option value="29">Gümüşhane Devlet Hastanesi</option>
+                    <option value="30">Hakkari Devlet Hastanesi</option>
+                    <option value="31">Hatay Devlet Hastanesi</option>
+                    <option value="32">Isparta Devlet Hastanesi</option>
+                    <option value="33">Mersin Devlet Hastanesi</option>
+                    <option value="34">İstanbul Devlet Hastanesi</option>
+                    <option value="35">İzmir Devlet Hastanesi</option>
+                    <option value="36">Kars Devlet Hastanesi</option>
+                    <option value="37">Kastamonu Devlet Hastanesi</option>
+                    <option value="38">Kayseri Devlet Hastanesi</option>
+                    <option value="39">Kırklareli Devlet Hastanesi</option>
+                    <option value="40">Kırşehir Devlet Hastanesi</option>
+                    <option value="41">Kocaeli Devlet Hastanesi</option>
+                    <option value="42">Konya Devlet Hastanesi</option>
+                    <option value="43">Kütahya Devlet Hastanesi</option>
+                    <option value="44">Malatya Devlet Hastanesi</option>
+                    <option value="45">Manisa Devlet Hastanesi</option>
+                    <option value="46">Kahramanmaraş Devlet Hastanesi</option>
+                    <option value="47">Mardin Devlet Hastanesi</option>
+                    <option value="48">Muğla Devlet Hastanesi</option>
+                    <option value="49">Muş Devlet Hastanesi</option>
+                    <option value="50">Nevşehir Devlet Hastanesi</option>
+                    <option value="51">Niğde Devlet Hastanesi</option>
+                    <option value="52">Ordu Devlet Hastanesi</option>
+                    <option value="53">Rize Devlet Hastanesi</option>
+                    <option value="54">Sakarya Devlet Hastanesi</option>
+                    <option value="55">Samsun Devlet Hastanesi</option>
+                    <option value="56">Siirt Devlet Hastanesi</option>
+                    <option value="57">Sinop Devlet Hastanesi</option>
+                    <option value="58">Sivas Devlet Hastanesi</option>
+                    <option value="59">Tekirdağ Devlet Hastanesi</option>
+                    <option value="60">Tokat Devlet Hastanesi</option>
+                    <option value="61">Trabzon Devlet Hastanesi</option>
+                    <option value="62">Tunceli Devlet Hastanesi</option>
+                    <option value="63">Şanlıurfa Devlet Hastanesi</option>
+                    <option value="64">Uşak Devlet Hastanesi</option>
+                    <option value="65">Van Devlet Hastanesi</option>
+                    <option value="66">Yozgat Devlet Hastanesi</option>
+                    <option value="67">Zonguldak Devlet Hastanesi</option>
+                    <option value="68">Aksaray Devlet Hastanesi</option>
+                    <option value="69">Bayburt Devlet Hastanesi</option>
+                    <option value="70">Karaman Devlet Hastanesi</option>
+                    <option value="71">Kırıkkale Devlet Hastanesi</option>
+                    <option value="72">Batman Devlet Hastanesi</option>
+                    <option value="73">Şırnak Devlet Hastanesi</option>
+                    <option value="74">Bartın Devlet Hastanesi</option>
+                    <option value="75">Ardahan Devlet Hastanesi</option>
+                    <option value="76">Iğdır Devlet Hastanesi</option>
+                    <option value="77">Yalova Devlet Hastanesi</option>
+                    <option value="78">Karabük Devlet Hastanesi</option>
+                    <option value="79">Kilis Devlet Hastanesi</option>
+                    <option value="80">Osmaniye Devlet Hastanesi</option>
+                    <option value="81">Düzce Devlet Hastanesi</option>
+                </select>
+                <span asp-validation-for="HospitalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Polikliniks" class="control-label"></label>
+                <select asp-for="Polikliniks" class="form-control">
+                    <option value="YogunBakim">Yoğun Bakım</option>
+                    <option value="PalyatifBakim">Palyatif Bakım</option>
+                    <option value="CocukSagligiVeHastaliklari">Çocuk Sağlığı ve Hastalıkları</option>
+                    <option value="EnfeksiyonHastaliklari">Enfeksiyon Hastalıkları</option>
+                    <option value="FizikselTipVeRehabilitasyon">Fiziksel Tıp ve Rehabilitasyon</option>
+                    <option value="GenelCerrahi">Genel Cerrahi</option>
+                    <option value="GenelDahiliye">Genel Dahiliye</option>
+                    <option value="GogusHastaliklari">Göğüs Hastalıkları</option>
+                    <option value="GozHastaliklari">Göz Hastalıkları</option>
+                    <option value="KadinHastaliklariVeDogum">Kadın Hastalıkları ve Doğum</option>
+                    <option value="KalpDamarCerrahisi">Kalp Damar Cerrahisi</option>
+                    <option value="Kardiyoloji">Kardiyoloji</option>
+                    <option value="KulakBurunBogaz">Kulak Burun Boğaz</option>
+                    <option value="Nöroloji">Nöroloji</option>
+                    <option value="OrtopediVeTravmatoloji">Ortopedi ve Travmatoloji</option>
+                    <option value="Üroloji">Üroloji</option>
+                    
+                </select>
+                <span asp-validation-for="Polikliniks" class="text-danger"></span>
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
