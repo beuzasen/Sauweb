@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wt2GNkrpR50JjJVD8Xn9jNxWgn/D7wxJxMyLMNICUIPvqyamEwaCx1EmSfVQD4Fc99sZs1BapNQASCkBb/FTxQ==",
+  "dgSpecHash": "ME7br0lYWhgD79EdgiKPNwf18Mco0ddwvRh9R2CYx8vZKO/zCkxAHA/a+85iSdGCUGDUWLmbmzJW4BGT+qgm+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Beyzanur\\Desktop\\Sauweb\\Sauweb\\Sauweb.csproj",
+  "projectFilePath": "C:\\Users\\Beyzanur\\source\\repos\\Sauweb\\Sauweb\\Sauweb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Beyzanur\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Beyzanur\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

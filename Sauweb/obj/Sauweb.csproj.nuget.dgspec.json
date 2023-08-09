@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Beyzanur\\Desktop\\Sauweb\\Sauweb\\Sauweb.csproj": {}
+    "C:\\Users\\Beyzanur\\source\\repos\\Sauweb\\Sauweb\\Sauweb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Beyzanur\\Desktop\\Sauweb\\Sauweb\\Sauweb.csproj": {
+    "C:\\Users\\Beyzanur\\source\\repos\\Sauweb\\Sauweb\\Sauweb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Beyzanur\\Desktop\\Sauweb\\Sauweb\\Sauweb.csproj",
+        "projectUniqueName": "C:\\Users\\Beyzanur\\source\\repos\\Sauweb\\Sauweb\\Sauweb.csproj",
         "projectName": "Sauweb",
-        "projectPath": "C:\\Users\\Beyzanur\\Desktop\\Sauweb\\Sauweb\\Sauweb.csproj",
+        "projectPath": "C:\\Users\\Beyzanur\\source\\repos\\Sauweb\\Sauweb\\Sauweb.csproj",
         "packagesPath": "C:\\Users\\Beyzanur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Beyzanur\\Desktop\\Sauweb\\Sauweb\\obj\\",
+        "outputPath": "C:\\Users\\Beyzanur\\source\\repos\\Sauweb\\Sauweb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
