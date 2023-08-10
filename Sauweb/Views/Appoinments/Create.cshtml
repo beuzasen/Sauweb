@@ -14,7 +14,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DoctorId" class="control-label"></label>
-                <select asp-for="DoctorId" class ="form-control" asp-items="ViewBag.DoctorId"></select>
+                <input asp-for="DoctorId" class="form-control" asp-items="ViewBag.DoctorId" />
+                <span asp-validation-for="DoctorId"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Day" class="control-label"></label>
@@ -30,15 +31,15 @@
                 <label asp-for="Time" class="control-label"></label>
                 <select asp-for="Time" class="form-control" >
 
-                    <option value="10.00">10.00</option>
-                    <option value="11.00">11.00</option>
-                    <option value="12.00">12.00</option>
+                    <option value="10.00">10.15</option>
+                    <option value="11.00">11.15</option>
                     <option value="12.00">12.15</option>
-                    <option value="13.00">13.00</option>
-                    <option value="14.00">14.00</option>
-                    <option value="15.00">15.00</option>
-                    <option value="16.00">16.00</option>
-                    <option value="17.00">17.00</option>
+                    <option value="12.00">12.15</option>
+                    <option value="13.00">13.15</option>
+                    <option value="14.00">14.15</option>
+                    <option value="15.00">15.15</option>
+                    <option value="16.00">16.15</option>
+                    <option value="17.00">17.15</option>
                 </select>
                 <span asp-validation-for="Time" class="text-danger"></span>
             </div>
@@ -48,14 +49,14 @@
                 </label>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Oluştur" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Randevu Listesine Geri Dön</a>
 </div>
 
 @section Scripts {

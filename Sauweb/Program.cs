@@ -1,12 +1,37 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Sauweb.Data;
+using Sauweb.Service;
+using System.Globalization;
+using System.Reflection;
 
 internal class Program
 {
     private static async Task Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
+
+        builder.Services.AddSingleton<LanguageService>();
+        builder.Services.AddLocalization(options => options.ResourcesPath = "Resource");
+        builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization(options => {
+            options.DataAnnotationLocalizerProvider = (type, factory) => {
+                var assemblyName = new AssemblyName(typeof(SharedResource).GetTypeInfo().Assembly.FullName);
+                return factory.Create("ShareResource", assemblyName.Name);
+            };
+        });
+        builder.Services.Configure<RequestLocalizationOptions>(options => {
+            var supportedCultures = new List<CultureInfo> {
+        new CultureInfo("tr-TR"),
+        new CultureInfo("en-US")
+    };
+            options.DefaultRequestCulture = new RequestCulture(culture: "tr-TR", uiCulture: "tr-TR");
+            options.SupportedCultures = supportedCultures;
+            options.SupportedUICultures = supportedCultures;
+            options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
+        });
 
         // Add services to the container.
         var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -36,6 +61,7 @@ internal class Program
         app.UseStaticFiles();
 
         app.UseRouting();
+        app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
         app.UseAuthentication();
         app.UseAuthorization();

@@ -17,6 +17,14 @@
         },
         "runtime": {
           "Sauweb.dll": {}
+        },
+        "resources": {
+          "en-US/Sauweb.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/Sauweb.resources.dll": {
+            "locale": "tr-TR"
+          }
         }
       },
       "Humanizer/2.14.1": {
